@@ -46,7 +46,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("PMingLiU", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(292, 16);
+            this.label1.Location = new System.Drawing.Point(292, 33);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 27);
@@ -56,8 +56,8 @@
             // scissors
             // 
             this.scissors.Font = new System.Drawing.Font("PMingLiU", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.scissors.Location = new System.Drawing.Point(127, 87);
-            this.scissors.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.scissors.Location = new System.Drawing.Point(127, 104);
+            this.scissors.Margin = new System.Windows.Forms.Padding(4);
             this.scissors.Name = "scissors";
             this.scissors.Size = new System.Drawing.Size(116, 59);
             this.scissors.TabIndex = 1;
@@ -68,8 +68,8 @@
             // rock
             // 
             this.rock.Font = new System.Drawing.Font("PMingLiU", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.rock.Location = new System.Drawing.Point(297, 87);
-            this.rock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rock.Location = new System.Drawing.Point(297, 104);
+            this.rock.Margin = new System.Windows.Forms.Padding(4);
             this.rock.Name = "rock";
             this.rock.Size = new System.Drawing.Size(116, 59);
             this.rock.TabIndex = 2;
@@ -80,8 +80,8 @@
             // paper
             // 
             this.paper.Font = new System.Drawing.Font("PMingLiU", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.paper.Location = new System.Drawing.Point(473, 87);
-            this.paper.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.paper.Location = new System.Drawing.Point(473, 104);
+            this.paper.Margin = new System.Windows.Forms.Padding(4);
             this.paper.Name = "paper";
             this.paper.Size = new System.Drawing.Size(116, 59);
             this.paper.TabIndex = 3;
@@ -93,17 +93,18 @@
             // 
             this.winLose.AutoSize = true;
             this.winLose.Font = new System.Drawing.Font("PMingLiU", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.winLose.Location = new System.Drawing.Point(39, 252);
+            this.winLose.Location = new System.Drawing.Point(39, 269);
             this.winLose.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.winLose.Name = "winLose";
-            this.winLose.Size = new System.Drawing.Size(0, 27);
+            this.winLose.Size = new System.Drawing.Size(39, 27);
             this.winLose.TabIndex = 4;
+            this.winLose.Text = "---";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("PMingLiU", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(121, 199);
+            this.label2.Location = new System.Drawing.Point(121, 216);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(120, 27);
@@ -114,7 +115,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("PMingLiU", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(121, 252);
+            this.label3.Location = new System.Drawing.Point(121, 269);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 27);
@@ -125,7 +126,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("PMingLiU", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label4.Location = new System.Drawing.Point(121, 320);
+            this.label4.Location = new System.Drawing.Point(121, 337);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 27);
@@ -135,8 +136,8 @@
             // reset
             // 
             this.reset.Font = new System.Drawing.Font("PMingLiU", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.reset.Location = new System.Drawing.Point(636, 385);
-            this.reset.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.reset.Location = new System.Drawing.Point(737, 442);
+            this.reset.Margin = new System.Windows.Forms.Padding(4);
             this.reset.Name = "reset";
             this.reset.Size = new System.Drawing.Size(116, 59);
             this.reset.TabIndex = 8;
@@ -148,37 +149,40 @@
             // 
             this.playerShow.AutoSize = true;
             this.playerShow.Font = new System.Drawing.Font("PMingLiU", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.playerShow.Location = new System.Drawing.Point(255, 199);
+            this.playerShow.Location = new System.Drawing.Point(255, 216);
             this.playerShow.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.playerShow.Name = "playerShow";
-            this.playerShow.Size = new System.Drawing.Size(0, 27);
+            this.playerShow.Size = new System.Drawing.Size(36, 27);
             this.playerShow.TabIndex = 9;
+            this.playerShow.Text = "---";
             // 
             // npcShow
             // 
             this.npcShow.AutoSize = true;
             this.npcShow.Font = new System.Drawing.Font("PMingLiU", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.npcShow.Location = new System.Drawing.Point(255, 252);
+            this.npcShow.Location = new System.Drawing.Point(255, 269);
             this.npcShow.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.npcShow.Name = "npcShow";
-            this.npcShow.Size = new System.Drawing.Size(0, 27);
+            this.npcShow.Size = new System.Drawing.Size(36, 27);
             this.npcShow.TabIndex = 10;
+            this.npcShow.Text = "---";
             // 
             // sourceCountShow
             // 
             this.sourceCountShow.AutoSize = true;
             this.sourceCountShow.Font = new System.Drawing.Font("PMingLiU", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.sourceCountShow.Location = new System.Drawing.Point(255, 320);
+            this.sourceCountShow.Location = new System.Drawing.Point(255, 337);
             this.sourceCountShow.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sourceCountShow.Name = "sourceCountShow";
-            this.sourceCountShow.Size = new System.Drawing.Size(0, 27);
+            this.sourceCountShow.Size = new System.Drawing.Size(36, 27);
             this.sourceCountShow.TabIndex = 11;
+            this.sourceCountShow.Text = "---";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(768, 460);
+            this.ClientSize = new System.Drawing.Size(866, 514);
             this.Controls.Add(this.sourceCountShow);
             this.Controls.Add(this.npcShow);
             this.Controls.Add(this.playerShow);
@@ -191,7 +195,7 @@
             this.Controls.Add(this.rock);
             this.Controls.Add(this.scissors);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,58 +17,135 @@ namespace SAIHS_CS_2_3
         {
             InitializeComponent();
         }
-        public String[] guessType = new String[] { "剪刀", "石頭", "布" };
-        public int gameState = 0;
-        public int[] gameSource = new int[] { 0, 0, 0 };
+        int win = 0;
+        int lose = 0;
+        int safe = 0;
         private void scissors_Click(object sender, EventArgs e)
         {
-            updateGame(0);
+            playerShow.Text = "玩家出了:剪刀";
+            Random kk = new Random();
+            int a = kk.Next(1, 4);
+            String npc = "";
+            if (a == 1)
+            {
+                npc = "剪刀";
+            }
+            else if (a == 2)
+            {
+                npc = "石頭";
+            }
+            else if (a == 3)
+            {
+                npc = "布";
+            }
+
+            npcShow.Text = "電腦出了:" + npc;
+
+            if (a == 1)
+            {
+                winLose.Text = "平手";
+                safe++;
+            }
+            else if (a == 2)
+            {
+                winLose.Text = "敗";
+                lose++; 
+            }
+            else
+            {
+                winLose.Text = "勝";
+                win++;
+            }
+            sourceCountShow.Text = "勝負統計:你贏了" + win + "次 電腦贏了" + lose + "次 平手" + safe + "次";
         }
         private void rock_Click(object sender, EventArgs e)
         {
-            updateGame(1);
+            playerShow.Text = "玩家出了:石頭";
+            Random kk = new Random();
+            int a = kk.Next(1, 4);
+            String npc = "";
+            if (a == 1)
+            {
+                npc = "剪刀";
+            }
+            else if (a == 2)
+            {
+                npc = "石頭";
+            }
+            else if (a == 3)
+            {
+                npc = "布";
+            }
+
+            npcShow.Text = "電腦出了:" + npc;
+
+            if (a == 2)
+            {
+                winLose.Text = "平手";
+                safe++;
+            }
+            else if (a == 3)
+            {
+                winLose.Text = "敗";
+                lose++;
+            }
+            else
+            {
+                winLose.Text = "勝";
+                win++;
+            }
+            sourceCountShow.Text = "勝負統計:你贏了" + win + "次 電腦贏了" + lose + "次 平手" + safe + "次";
+
         }
         private void paper_Click(object sender, EventArgs e)
         {
-            updateGame(2);
+            playerShow.Text = "玩家出了:布";
+            Random kk = new Random();
+            int a = kk.Next(1, 4);
+            String npc = "";
+            if (a == 1)
+            {
+                npc = "剪刀";
+            }
+            else if (a == 2)
+            {
+                npc = "石頭";
+            }
+            else if (a == 3)
+            {
+                npc = "布";
+            }
+
+            npcShow.Text = "電腦出了:" + npc;
+
+            if (a == 3)
+            {
+                winLose.Text = "平手";
+                safe++;
+            }
+            else if (a == 1)
+            {
+                winLose.Text = "敗";
+                lose++;
+            }
+            else
+            {
+                winLose.Text = "勝";
+                win++;
+            }
+            sourceCountShow.Text = "勝負統計:你贏了" + win + "次 電腦贏了" + lose + "次 平手" + safe + "次";
+
         }
-        private void updateGame(int player)
-        {
-            Random random = new Random();
-            int npc = random.Next(0, 3);
-            playerShow.Text = guessType[player];
-            npcShow.Text = guessType[npc];
-            if (npc == player)
-            {
-                gameState = 2;
-            }
-            else if (npc == 0)
-            {
-                gameState = player == 1 ? 0 : 1;
-            }
-            else if (npc == 1)
-            {
-                gameState = player == 0 ? 1 : 0;
-            }
-            else if(npc == 2)
-            {
-                gameState = player == 0 ? 0 : 1;
-            }
-            winLose.Text = gameState == 2 ? "平手" : gameState == 0 ? "勝" : "輸";
-            gameSource[gameState]++;
-            sourceCountShow.Text = $"你贏了{gameSource[0]}次 電腦贏了{gameSource[1]}次 平手{gameSource[2]}次";
-        }
+
         private void reset_Click(object sender, EventArgs e)
         {
-            for(int i = 0;i < gameSource.Length;i++)
-            {
-                gameSource[i] = 0;
-            }
-            var labelAll = new Label[] { winLose, playerShow, npcShow, sourceCountShow };
-            foreach(Label i in labelAll)
-            {
-                i.Text = "";
-            }
+            win = 0;
+            lose = 0;
+            safe = 0;
+            playerShow.Text = "玩家出了:";
+            npcShow.Text = "電腦出了:";
+            sourceCountShow.Text = "勝負統計:你贏了0次 電腦了0次 平手0次";
         }
+
     }
 }
